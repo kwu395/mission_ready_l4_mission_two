@@ -31,6 +31,7 @@ const addToCartImg = document.getElementById("ATCImg"); // Product Image
 const addToCartItem = document.getElementById("ATCItemName"); // Product Name
 const addToCartPrice = document.getElementById("ATCPrice"); // Product Price
 const itemQuantity = document.getElementById('quantity'); // Item Quantity
+const shoppingCartNav = document.getElementById('shoppingCart') // Shopping cart nav bar
 const shoppingCartX = document.getElementById('shoppingCartX') // X Button
 const shoppingCartNumEl = document.getElementById("shoppingCartNum"); // Shopping cart display number (in nav)
 const blurOverlay = document.getElementById('blurOverlay'); // Blur overlay
@@ -55,6 +56,7 @@ function goBack() {
 
 function addOneToCart(price) {
     if (itemQuantity.value > 0 ) {
+        shoppingCartNav.style.width = "350px"; 
         shoppingCartX.style.display = "inline"; // Add X button to shopping cart nav
         shoppingCartPrice += (selectedPrice * Number(itemQuantity.value)); // Calculate total shopping cart price
         shoppingCartQuantity += Number(itemQuantity.value); // Calculate total shopping cart item quantity
@@ -67,6 +69,7 @@ function clearShoppingCart() {
   shoppingCartPrice = 0; // Reset shopping cart nav text
   shoppingCartQuantity = 0;
   shoppingCartNumEl.textContent = `(0)`;
+  shoppingCartNav.style.width = "200px"; 
 }
 
 // ========== LIGHT AND DARK MODE TOGGLE ========== ///

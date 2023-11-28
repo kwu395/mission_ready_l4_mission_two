@@ -172,11 +172,11 @@ nav .fa-solid {
 } 
 
 #shoppingCart {
-    width: 340px;
+    width: 200px;
 }
 
 #shoppingCart:hover {
-    width: 350px;
+    width: 210px;
 }
 
 .leftnav:hover {
