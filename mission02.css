@@ -1,0 +1,450 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* BLUR ELEMENT */
+#blurOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px); 
+    display: none;
+    z-index: 1;
+}
+
+/* ADD TO CART ELEMENT */
+#addToCart {
+    font-family: Tahoma;
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    background-color: ghostwhite;
+    color: darkblue;
+    text-align: center;
+    border: 6px inset darkblue;
+    border-radius: 20px;
+    width: 500px;
+    height: 500px;
+    margin-top: -250px;
+    margin-left: -250px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* X mark */
+#addToCart .fa-circle-xmark {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: red;
+    transition: font-size 0.5s;
+}
+
+#addToCart .fa-circle-xmark:hover {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#addToCart img {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin-top: -120px;
+    margin-left: -100px;
+}
+
+#quantity {
+    width: 40px;
+    height: 20px;
+    border: 3px inset darkblue;
+}
+
+#addToCartContent {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Shopping Cart Icon */
+#addToCart .fa-cart-plus {
+    position: relative;
+    top: 6px;
+}
+
+.fa-cart-plus {
+    font-size: 26px;
+    transition: font-size 0.5s;
+    margin-left: 15px;
+    color: darkblue;
+}
+
+.fa-cart-plus:hover {
+    cursor: pointer;
+    color: rgb(135, 179, 251);
+    font-size: 32px;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 60px;
+    font-family: Tahoma;
+    position: relative;
+    background-color: ghostwhite;
+    z-index: 0;
+}
+
+header h1 {
+    font-size: 60px;
+    transition: font-size 1s;
+}
+
+header h2 {
+    font-size: 25px;
+    transition: font-size 1s;
+}
+
+header > div {
+    position: absolute;
+    font-size: 30px;
+    right: 50px;
+    top: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px 15px 10px 15px;
+    border: solid 3px black; 
+    border-radius: 15px;
+    transition: background-color 0.5s;
+}
+
+header > div > i {
+    padding: 0px 5px 0px 5px;
+}
+
+
+header > div:hover {
+    cursor: pointer;
+    background-color: white;
+}
+
+#dark {
+    color: rgba(0, 0, 0, 0.25);
+}
+
+/* NAVIGATION BAR */
+nav {
+    display: flex;
+    background-color: black;
+    font-family: Tahoma;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    font-size: 14px;
+}   
+
+nav i {
+    padding: 0px 0px 0px 20px;
+}
+
+nav i:hover {
+    cursor: pointer;
+}
+
+.leftnav {
+    background-color: darkblue;
+    color: ghostwhite;
+    text-align: center;
+    padding: 15px;
+    width: 140px;
+    transition: width 1s, background-color 0.5s, color 0.5s, font-weight 0.5s;
+}
+
+nav .fa-solid {
+    padding: 8px;
+}
+
+.rightnav {
+    color: ghostwhite;
+    text-align: center;
+    padding: 15px;
+    width: 130px;
+    transition: width 1s, background-color 0.5s, color 0.5s, font-weight 0.5s;
+} 
+
+#shoppingCart {
+    width: 340px;
+}
+
+#shoppingCart:hover {
+    width: 350px;
+}
+
+.leftnav:hover {
+    background-color: ghostwhite;
+    color: darkblue;
+    cursor: pointer;
+    width: 150px;
+    font-weight: bold;
+}
+
+.smallnav {
+    width: 90px;
+}
+
+.smallnav:hover {
+    width: 100px;
+}
+
+.rightnav:hover {
+    background-color: ghostwhite;
+    color:darkblue;
+    cursor: pointer;
+    width: 140px;
+    font-weight: bold;
+}
+
+#search {
+    background-color: darkblue;
+    color: ghostwhite;
+    text-align: center;
+    padding: 6px 20px 2px 20px;
+    width: 250px;
+    transition: width 1s, background-color 0.5s, color 0.5s;
+}
+
+#search input {
+    width: 170px;
+    margin-right: 10px;
+    transition: width 1s;
+}
+
+#search input:hover {
+    width: 200px;
+}
+
+#search:hover {
+    background-color: ghostwhite;
+    color: darkblue;
+    cursor: pointer;
+    width: 260px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.5;
+}
+
+a:hover {
+    color:darkblue;
+}
+
+#shoppingCartX {
+    display: none;
+    position: relative;
+    top: 1px;
+    color: red;
+    transition: font-size 0.5s;
+}
+
+#shoppingCartX:hover {
+    font-size: 20px;
+}
+
+/* SLIDESHOW */
+#slideshow {
+    position: relative;
+    z-index: 0;
+} 
+
+#slideshowImages {
+    background-color: black;
+    object-fit: contain;
+    display: block;
+    width: 100%;
+    height: 400px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#slideshow > span {
+    color:black;
+    cursor: pointer;
+    font-size: 60px;
+    position: absolute;
+    top: 33%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    border: solid black 3px;
+    transition: background-color 0.5s;
+}
+
+#rightarrow {
+    left: 96%;
+    padding: 5px 15px 7px 18px;
+}
+
+#leftarrow {
+    right: 96%;
+    padding: 5px 18px 7px 15px;
+}
+
+#slideshow > span:hover {
+    background-color: white;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}   
+
+middle h1 {
+    padding: 40px 0px 30px 40px;
+    font-family: Tahoma;
+    background-color: darkblue;
+    color: ghostwhite;
+    margin: 0px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background: linear-gradient(darkblue, black);
+    transition: font-size 1s, color 1s;
+}
+
+middle h1:hover {
+    cursor: pointer;
+    font-size: 35px;
+    color: #d1d1f7;
+}
+
+/* MOST POPULAR */
+#mostpopular {
+    background-color: ghostwhite;
+    display: flex;
+    margin: 0px;
+    justify-content: space-between;
+    font-family: Tahoma;
+}
+
+/* COMPUTERS */
+#computers {
+    background-color: ghostwhite;
+    display: flex;
+    margin: 0px;
+    justify-content: space-between;
+    font-family: Tahoma;
+}
+
+/* STRESS-RELIEF ITEMS */
+#stress {
+    background-color: ghostwhite;
+    display: flex;
+    margin: 0px;
+    justify-content: space-between;
+    font-family: Tahoma;
+} 
+
+img {
+    width: 200px;
+    background-color: ghostwhite;
+    padding: 0px;
+    margin: 0px;
+    transition: width 1s;
+}
+
+.item {
+    color: darkblue;
+    border: 4px inset darkblue;
+    border-radius: 15%;
+    background-color: ghostwhite;
+    width: 320px;
+    margin: 40px;
+    padding: 20px;
+    text-align: center;
+    transition: width 1s, background-color 1s;
+}
+
+.item:hover {
+    width: 360px;
+    cursor: pointer;
+}
+
+#img:hover {
+    width: 250px;
+}
+
+/* BOTTOM SECTION */
+
+#bottom {
+    background-color: ghostwhite;
+    border-top: 3px solid black;
+}
+
+#bottom h1 {
+    margin: 0px;
+    padding: 20px 0px 0px 50px;
+}
+
+#bottom p {
+    padding: 0px 0px 0px 50px;
+}
+
+#help {
+    color: white;
+    padding-bottom: 10px;
+    font-family: Tahoma;
+    background: linear-gradient(darkblue, black);
+}
+
+form {
+    padding: 20px 0px 50px 50px;
+    font-family: Calibri;
+}
+
+select {
+    margin: 10px 0px 10px 0px;
+    padding: 5px;
+    cursor: pointer;
+    width: 292px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+}
+
+select:hover,input[type=text]:hover,[type=email]:hover,[type=number]:hover {
+    background-color: rgb(232, 232, 255);
+}
+
+textarea, input[type=text],[type=email],[type=number] {
+    width: 15%;
+    padding: 5px;
+    margin: 10px 0px 10px 0px;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+}
+
+input[type=submit] {
+    background: linear-gradient(darkblue, black);
+    color: ghostwhite;
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 16%;
+    height: 30px;
+}
+
+input[type=submit]:hover {
+    background: linear-gradient(#6868b3, #010161);
+    cursor: pointer;
+}
+
+/* SPAN */
+span {
+    color: red;
+}
+
+header span {
+    color: darkblue;
+}

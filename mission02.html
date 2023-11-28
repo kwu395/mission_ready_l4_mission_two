@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BP Tech</title>
+        <link rel="stylesheet" href="mission02.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <script src="mission02.js" defer></script>
+    </head>
+
+    <body>
+        <!-- ADD TO CART ELEMENT -->
+        <div id="blurOverlay"></div> <!-- BLUR ELEMENT -->
+        <div id="addToCart">
+            <img id="ATCImg" src="images/item1.png" alt="asus laptop"/>
+            <i class="fa-solid fa-circle-xmark" onclick="goBack()"></i>
+            <div id="addToCartContent">
+                <p><b id="ATCItemName">Computer</b></p>
+                <p><b id="ATCPrice">$1000</b></p>
+                <p><b id="ATC">Add to cart?</b></p> <input id="quantity" type="number" value="0" min="0"><i class="fa-solid fa-cart-plus" onclick="addOneToCart()"></i>
+            </div>
+        </div>
+                
+        <!-- HEADER -->
+        <header>
+            <h1><span>BP</span> TECH</h1>
+            <h2><i>Products for Software Developers</i></h2>
+            <div onclick = "toggleDisplayMode()">
+                <i id="dark" class="fa-solid fa-moon"></i>
+                <i id="light" class="fa-solid fa-sun"></i>
+            </div>
+        </header>
+
+        <!-- NAVIGATION BAR -->
+        <nav>
+            <div class="leftnav smallnav">Home<i class="fa-solid fa-house"></i></a></div>
+            <div class="leftnav smallnav">Shop<i class="fa-solid fa-computer"></i></div>
+            <div class="leftnav">Promotions<i class="fa-solid fa-comment-dollar"></i></div>
+            <div class="leftnav">Help & Support<i class="fa-solid fa-handshake-angle"></i></div>
+            <div id="search"><input type="text" name="name" placeholder="Search a product..." /><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="rightnav">My Account<i class="fa-solid fa-person"></i></div>
+            <div id="shoppingCart" class="rightnav">Shopping Cart<i class="fa-solid fa-cart-shopping"></i> <span id="shoppingCartNum">(0)</span><i id = "shoppingCartX" class="fa-solid fa-circle-xmark" onclick = "clearShoppingCart()"></i></div>
+            <div class="rightnav">Sign Out<i class="fa-solid fa-right-from-bracket"></i></div>
+        </nav>
+
+        <!-- SLIDESHOW -->
+        <div id = "slideshow">
+            <img id = "slideshowImages" src="images/slideshow1.png" alt="school ad"/>
+            <span id = "rightarrow" onclick = "nextImage()">&#10097</span>
+            <span id = "leftarrow" onclick = "prevImage()">&#10096</span>
+        </div>
+
+        <!-- MIDDLE SECTION -->
+        <middle>
+            <h1>MOST POPULAR <i class="fa-solid fa-arrow-right-long"></i></h1>
+            <div id="mostpopular">
+                <div class="item">
+                    <img class="images" src="images/item1.png" alt="asus laptop"/>
+                    <p><b>ASUS Vivobook S15 S510</b></p>
+                    <p><b><s>$1299.99</s><span> NOW $1199.99</span></b></p>
+                    <i class="fa-solid fa-cart-plus" onclick="addToCart(1, `ASUS Vivobook S15 S510`, 1199.99)"></i>
+                </div>
+                <div class="item">
+                    <img class="images" src="images/item2.png" alt="sony headphones"/>
+                    <p><b>Sony WH-1000XM4 Wireless Headphones - Black</b></p>
+                    <p><b><s>$599.99</s><span> NOW $429.99</span></b></p>
+                    <i class="fa-solid fa-cart-plus" onclick="addToCart(2, `Sony WH-1000XM4 Wireless Headphones - Black`, 429.99)"></i>
+                </div>
+                <div class="item">
+                    <img class="images" src="images/item3.png" alt="apple keyboard"/>
+                    <p><b>Apple Magic Keyboard</b></p>
+                    <p><b><s>$149.99</s><span> NOW $143.99</span></b></p>
+                    <i class="fa-solid fa-cart-plus" onclick="addToCart(3, `Apple Magic Keyboard`, 143.99)"></i>
+                </div>
+                <div class="item">
+                    <img class="images" src="images/item4.png" alt="dell mouse"/>
+                    <p><b>Dell MS116 Wired Mouse</b></p>
+                    <p><b><s>$149.99</s><span> NOW $143.99</span></b></p>
+                    <i class="fa-solid fa-cart-plus" onclick="addToCart(4, `Dell MS116 Wired Mouse`, 149.99)"></i>
+                </div>
+            </div>
+
+            <h1>COMPUTERS & TABLETS <i class="fa-solid fa-arrow-right-long"></i></i></h1>
+            <div id="computers">
+                <div class="item">
+                    <img class="images" src="images/item5.png" alt="macbook"/>
+                    <p><b>Macbook Pro 14-inch (Space Grey)</b></p>
+                    <p><b><s>$3299.99</s><span> NOW $3199.99</span></b></p>
+                    <i class="fa-solid fa-cart-plus" onclick="addToCart(5, `Macbook Pro 14-inch (Space Grey)`, 3199.99)"></i>
+                </div>
+                <div class="item">
+                    <img class="images" src="images/item6.png" alt="bp family series pc"/>
+                    <p><b>BP Family Series 13th Gen Desktop PC</b></p>
+                    <p><b><s>$1298.99</s><span> NOW $1226.99</span></b></p>
+                    <i class="fa-solid fa-cart-plus" onclick="addToCart(6, `BP Family Series 13th Gen Desktop PC`, 1226.99)"></i>
+                </div>
+                <div class="item">
+                    <img class="images" src="images/item7.png" alt="microsoft surface pro 9"/>
+                    <p><b>Microsoft Surface Pro 9 - Platinum</b></p>
+                    <p><b><s>$1999.99</s><span> NOW $1827.99</span></b></p>
+                    <i class="fa-solid fa-cart-plus" onclick="addToCart(7, `Microsoft Surface Pro 9 - Platinum`, 1827.99)"></i>
+                </div>
+                <div class="item">
+                    <img class="images" src="images/item8.png" alt="samsung tab a8"/>
+                    <p><b>Samsung Galaxy Tab A8 10.5" Tablet - Grey</b></p>
+                    <p><b><s>$449.99</s><span> NOW $405.99</span></b></p>
+                    <i class="fa-solid fa-cart-plus" onclick="addToCart(8, `Samsung Galaxy Tab A8 10.5 Tablet - Grey`, 405.99)"></i>
+                </div>
+            </div>
+
+            <h1>STRESS-RELIEF <i class="fa-solid fa-arrow-right-long"></i></h1>
+            <div id="stress">
+                <div class="item">
+                    <img class="images" src="images/item9.png" alt="punching bag"/>
+                    <p><b>Desktop Punching Bag</b></p>
+                    <p><b><s>$59.99</s><span> NOW $49.99</span></b></p>
+                    <i class="fa-solid fa-cart-plus" onclick="addToCart(9, `Desktop Punching Bag`, 49.99)"></i>
+                </div>
+                <div class="item">
+                    <img class="images" src="images/item10.png" alt="big enter key stress relief plush"/>
+                    <p><b>Big Enter Key Plush</b></p>
+                    <p><b><s>$34.99</s><span> NOW $29.95</span></b></p>
+                    <i class="fa-solid fa-cart-plus" onclick="addToCart(10, `Big Enter Key Plush`, 29.95)"></i>
+                </div>
+                <div class="item">
+                    <img class="images" src="images/item11.png" alt="massage gun"/>
+                    <p><b>Massage Gun</b></p>
+                    <p><b><s>$99.99</s><span> NOW $79.99</span></b></p>
+                    <i class="fa-solid fa-cart-plus" onclick="addToCart(11, `Massage Gun`, 79.99)"></i>
+                </div>
+                <div class="item">
+                    <img class="images" src="images/item12.png" alt="nintendo switch oled"/>
+                    <p><b>Nintendo Switch - OLED</b></p>
+                    <p><b><s>$629.99</s><span> NOW $617.99</span></b></p>
+                    <i class="fa-solid fa-cart-plus" onclick="addToCart(12, `Nintendo Switch - OLED`, 617.99)"></i>
+                </div>
+            </div>
+        </middle>
+        
+        <!-- BOTTOM SECTION -->
+        <div id="bottom">
+            <div id="help">
+                <h1>Help & Support <i class="fa-solid fa-handshake-angle"></i></h1>
+                <p><b>Got questions? Submit a request!</b></p>
+            </div>
+            <form action="mailto:kennethwu@missionreadyhq.com" method="post">
+                <!-- NAME FIELD -->
+                <label class = "formLabel">Name<span>*</span>: </label> <br>
+                <input type="text" name="name" required placeholder="Enter your full name..." /> <br>
+
+                <!-- EMAIL FIELD -->
+                <label class = "formLabel">Email<span>*</span>: </label> <br>
+                <input type="email" name="email" required placeholder="Enter your email..."/> <br>
+
+                <!-- CONTACT NUMBER -->
+                <label class = "formLabel">Contact Number: </label> <br>
+                <input type="number" name="number" placeholder="Enter your contact number..."/> <br>
+
+                <!-- SUBJECT RADIO BUTTONS -->
+                <label class = "formLabel">Subject<span>*</span>: </label> <br>
+                <select>
+                    <option value="select">Select a subject...</option>
+                    <option value="purchase">Purchase Help</option>
+                    <option value="product">Product Problems</option>
+                    <option value="feedback">Feedback & Complaints</option>
+                    <option value="gifts">Gifts</option>
+                    <option value="other">Other</option>
+                </select> <br>
+
+                <!-- MESSAGE TEXT AREA -->
+
+                <label class = "formLabel">Message<span>*</span>: </label> <br> 
+                <textarea required></textarea> <br>
+
+                <!-- SUBMIT BUTTON -->
+                <input type="submit" value="Submit"/> 
+            </form>
+        </div>
+    </main>
+    </body>
+</html>
