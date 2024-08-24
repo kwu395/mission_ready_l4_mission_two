@@ -18,12 +18,12 @@ ___
 ____
 ***
 
-![Screen3](./screen1.png)
+![Screen3](./screen3.png)
 
 ____
 ***
 
-![Screen4](./screen1.png)
+![Screen4](./screen4.png)
 
 
 
